@@ -9,19 +9,18 @@ const Carouselpage = () => {
     {
       image: img1,
       title: "First slide label",
-      caption: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+      videoUrl: "https://player.vimeo.com/video/103007490"
     },
     {
       image: img2,
       title: "Second slide label",
-      caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      videoUrl: "https://player.vimeo.com/video/224187671"
     },
     {
       image: img3,
       title: "Third slide label",
-      caption: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-    },
-    // Add more slides as needed
+      videoUrl: "https://player.vimeo.com/video/267309966"
+    }
   ];
 
   return <ReusableCarousel slides={slides} />;
