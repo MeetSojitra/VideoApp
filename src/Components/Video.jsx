@@ -2,7 +2,13 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 
-const Video = ({title,description,thumbnailUrl,videolink,handleFavoriteClick }) => {
+const Video = ({
+  title,
+  description,
+  thumbnailUrl,
+  handleFavoriteClick,
+  onClick,
+}) => {
   const [hovered, setHovered] = React.useState(false);
   const [isFavorite, setIsFavorite] = React.useState(false);
 
@@ -15,9 +21,15 @@ const Video = ({title,description,thumbnailUrl,videolink,handleFavoriteClick }) 
   return (
     <div
       className="video-item"
-      onMouseEnter={() => {setHovered(true);}}
-      onMouseLeave={() => {setHovered(false);}}
-      onClick={() => {window.open(videolink, "_blank");}}
+      onMouseEnter={() => {
+        setHovered(true);
+      }}
+      onMouseLeave={() => {
+        setHovered(false);
+      }}
+      onClick={() => {
+        onClick();
+      }}
     >
       <img
         style={{ height: "25vh", width: "50vw", objectFit: "cover" }}
@@ -25,10 +37,7 @@ const Video = ({title,description,thumbnailUrl,videolink,handleFavoriteClick }) 
         alt={title}
       />
       <div className="favorite-icon" onClick={handleHeartClick}>
-        <FaHeart
-          color={"rgba(255, 255, 255, 0.8)"}
-          size={24}
-        />
+        <FaHeart color={"rgba(255, 255, 255, 0.8)"} size={24} />
       </div>
 
       <div className="video-details">

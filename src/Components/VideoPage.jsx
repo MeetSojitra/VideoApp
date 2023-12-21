@@ -1,8 +1,8 @@
 // VideoPage.jsx
-import { useState } from 'react';
-import VideoGrid from './VideoGrid';
-import FavoriteVideo from './FavoriteVideo';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import VideoGrid from "./VideoGrid";
+import FavoriteVideo from "./FavoriteVideo";
+import PropTypes from "prop-types";
 
 const VideoPage = ({ videosData }) => {
   VideoPage.propTypes = {
@@ -12,7 +12,9 @@ const VideoPage = ({ videosData }) => {
 
   const handleFavoriteClick = (video, isFavorite) => {
     if (isFavorite) {
-      setFavoriteVideos((prevFavorites) => prevFavorites.filter((favVideo) => favVideo !== video));
+      setFavoriteVideos((prevFavorites) =>
+        prevFavorites.filter((favVideo) => favVideo !== video)
+      );
     } else {
       setFavoriteVideos((prevFavorites) => [...prevFavorites, video]);
     }
@@ -22,13 +24,20 @@ const VideoPage = ({ videosData }) => {
     <div>
       {favoriteVideos.length > 0 && (
         <>
-          <h2>Favorites</h2>
-          <FavoriteVideo videosData={favoriteVideos} />
+          <main className="container">
+            <h2 className="section-heading">Favorites</h2>
+            <FavoriteVideo videosData={favoriteVideos} />
+          </main>
         </>
       )}
 
-      <h2>All Videos</h2>
-      <VideoGrid videosData={videosData} handleFavoriteClick={handleFavoriteClick} />
+      <main className="container">
+        <h2 className="section-heading">All Videos</h2>
+        <VideoGrid
+          videosData={videosData}
+          handleFavoriteClick={handleFavoriteClick}
+        />
+      </main>
     </div>
   );
 };
