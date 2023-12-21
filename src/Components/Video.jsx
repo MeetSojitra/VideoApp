@@ -26,7 +26,7 @@ const Video = ({title,description,thumbnailUrl,videolink,handleFavoriteClick }) 
       />
       <div className="favorite-icon" onClick={handleHeartClick}>
         <FaHeart
-          color={isFavorite ? "#FF0000" : "rgba(255, 255, 255, 0.8)"}
+          color={"rgba(255, 255, 255, 0.8)"}
           size={24}
         />
       </div>

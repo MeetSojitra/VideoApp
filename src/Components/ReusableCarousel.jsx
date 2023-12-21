@@ -1,19 +1,8 @@
-
-import  { React,useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "react-modal-video/scss/modal-video.scss";
-import { Dialog, Transition } from '@headlessui/react'
 
 const ReusableCarousel = ({ slides }) => {
-  let [isOpen, setIsOpen] = useState(true);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
+  
   // const [showModal, setShowModal] = useState(false);
   // const [videoUrl, setVideoUrl] = useState("");
 

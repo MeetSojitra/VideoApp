@@ -19,7 +19,7 @@ const App = () => {
 
     fetchData();
   }, []);
-console.log(videosData);
+  
   return (
     <>
         <Carouselpage />
