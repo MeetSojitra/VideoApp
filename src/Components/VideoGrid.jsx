@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Video from "./Video";
-import Modal from "../Components/modal";
+import Modal from "./modal/Modal";
 
 const VideoGrid = ({ videosData, handleFavoriteClick }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -12,11 +12,11 @@ const VideoGrid = ({ videosData, handleFavoriteClick }) => {
         <Video
           key={index}
           {...video}
-          handleFavoriteClick={() => handleFavoriteClick(video)}
+          handleFavoriteClick={() => handleFavoriteClick(video)} // function to handle favorite click event
           onClick={() => {
             setOpenModal(true);
             setVideoData(video);
-          }}
+          }} // function to handle video click event and open the modal
         />
       ))}
       {videoData && (
@@ -24,7 +24,7 @@ const VideoGrid = ({ videosData, handleFavoriteClick }) => {
           isOpen={openModal && videoData}
           setOn={setOpenModal}
           data={videoData}
-          onClose={() => setOpenModal(false)}
+          onClose={() => setOpenModal(false)} // function to handle modal close event
         />
       )}
     </div>

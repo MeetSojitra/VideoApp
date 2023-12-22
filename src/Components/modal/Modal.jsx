@@ -1,10 +1,11 @@
-import ReactPortal from "../modal/ReactPortal";
+import ReactPortal from "./ReactPortal";
 import Vimeo from "@u-wave/react-vimeo";
 
 // Modal component.
 const Modal = ({ isOpen, data, onClose }) => {
   const { description, tags, title, videolink } = data;
-  // Manage button enabled/disabled state.
+
+  // if modal is not open, return null.
   if (!isOpen) return null;
 
   return (
@@ -12,9 +13,12 @@ const Modal = ({ isOpen, data, onClose }) => {
       {/* Modal Background */}
       <ReactPortal wrapperId="react-portal-modal-container">
         <div className="main-wrapper">
+
+          {/* Modal Close Button */}
           <button className="close" onClick={() => onClose()}>
             close
           </button>
+
           {/* Modal Heading */}
           <div className="">
             <Vimeo
@@ -25,6 +29,7 @@ const Modal = ({ isOpen, data, onClose }) => {
               responsive
             />
           </div>
+
           {/* Modal Prompt Text */}
           <div className="content">
             <h4 className="title">{title}</h4>
@@ -37,6 +42,7 @@ const Modal = ({ isOpen, data, onClose }) => {
             </div>
             <p className="description">{description}</p>
           </div>
+          
         </div>
       </ReactPortal>
     </main>

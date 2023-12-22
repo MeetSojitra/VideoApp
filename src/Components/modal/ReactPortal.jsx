@@ -1,10 +1,12 @@
 // @src/components/ReactPortal.tsx
 import { useState, useLayoutEffect } from "react";
 import { createPortal } from "react-dom";
+
 // Default props value.
 const defaultReactPortalProps = {
   wrapperId: "react-portal",
 };
+
 // Define ReactPortal props.
 // Render component.
 const ReactPortal = ({ children, wrapperId }) => {
