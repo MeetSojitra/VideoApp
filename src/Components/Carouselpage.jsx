@@ -1,4 +1,3 @@
-import React from "react";
 import ReusableCarousel from "./ReusableCarousel";
 import img1 from "../images/img1.jpeg";
 import img2 from "../images/img2.jpeg";
