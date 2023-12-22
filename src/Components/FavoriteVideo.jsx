@@ -1,4 +1,3 @@
-// FavoriteVideo.jsx
 import {} from "react";
 import VideoGrid from "./VideoGrid";
 import PropTypes from "prop-types";
@@ -13,7 +12,7 @@ const FavoriteVideo = ({ videosData }) => {
   }
 
   return (
-    <div className="favorite-video-grid">
+    <div>
       <VideoGrid videosData={videosData} />
     </div>
   );

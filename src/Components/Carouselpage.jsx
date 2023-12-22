@@ -2,7 +2,6 @@ import ReusableCarousel from "./ReusableCarousel";
 import img1 from '/images/img1.jpeg';
 import img2 from '/images/img2.jpeg';
 import img3 from '/images/img3.jpeg';
-import img4 from '/images/img4.jpeg';
 
 const Carouselpage = () => {
   const slides = [
@@ -21,11 +20,6 @@ const Carouselpage = () => {
       title: "Third slide label",
       url: "https://player.vimeo.com/video/267309966",
     },
-    {
-      image: img4,
-      title: "Fourth slide label",
-      url: "https://player.vimeo.com/video/267309966",
-    }
   ];
 
   return <ReusableCarousel slides={slides} />;

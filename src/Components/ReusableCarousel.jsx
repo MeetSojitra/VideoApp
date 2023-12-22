@@ -2,19 +2,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "react-modal-video/scss/modal-video.scss";
 
 const ReusableCarousel = ({ slides }) => {
-  // const [showModal, setShowModal] = useState(false);
-  // const [videoUrl, setVideoUrl] = useState("");
-
-  // const handleWatchVideo = (videoUrl) => {
-  //   setVideoUrl(videoUrl);
-  //   setShowModal(true);
-  // };
-
-  // const handleCloseModal = () => {
-  //   setVideoUrl("");
-  //   setShowModal(false);
-  // };
-
+  
   return (
     <>
       <Carousel indicators={false} data-bs-theme="dark">
@@ -22,11 +10,10 @@ const ReusableCarousel = ({ slides }) => {
           <Carousel.Item key={index} className="carousel-wrapper">
             <img
               style={{ height: "100vh", width: "100vw", objectFit: "cover" }}
-              className="d-block w-100"
               src={slide.image}
               alt={`Slide ${index + 1}`}
             />
-            <div className="carousel-caption-new">
+            <div className="carousel-details">
               <div className="title-content">
                 <h2 className="carousel-title">{slide.title}</h2>
               </div>
@@ -44,20 +31,6 @@ const ReusableCarousel = ({ slides }) => {
           </Carousel.Item>
         ))}
       </Carousel>
-
-      {/* <Modal show={showModal} onHide={handleCloseModal} centered>
-        <Modal.Body>
-          <video
-            controls
-            autoPlay
-            muted
-            playsInline
-            style={{ widt h: "100%" }}
-            src={videoUrl}
-            type="video/mp4"
-          />
-        </Modal.Body>
-      </Modal> */}
     </>
   );
 };
