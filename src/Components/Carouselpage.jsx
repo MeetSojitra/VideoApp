@@ -1,8 +1,11 @@
-import React from "react";
 import ReusableCarousel from "./ReusableCarousel";
-import img1 from "../images/img1.jpeg";
-import img2 from "../images/img2.jpeg";
-import img3 from "../images/img3.jpeg";
+
+// import image from public folder
+// impo
+
+import img1 from '../../public/images/img1.jpeg';
+import img2 from '../../public/images/img2.jpeg';
+import img3 from '../../public/images/img3.jpeg';
 
 const Carouselpage = () => {
   const slides = [

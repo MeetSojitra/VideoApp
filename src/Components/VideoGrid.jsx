@@ -1,4 +1,3 @@
-// VideoGrid.jsx
 import { useState } from "react";
 import Video from "./Video";
 import Modal from "../Components/modal";
