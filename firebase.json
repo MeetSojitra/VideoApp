@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "videoapp",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
