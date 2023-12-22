@@ -4,6 +4,7 @@ import img2 from '/images/img2.jpeg';
 import img3 from '/images/img3.jpeg';
 
 const Carouselpage = () => {
+  // Carousel slides data
   const slides = [
     {
       image: img1,

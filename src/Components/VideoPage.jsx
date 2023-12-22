@@ -3,16 +3,27 @@ import VideoGrid from "./VideoGrid";
 import FavoriteVideo from "./FavoriteVideo";
 
 const VideoPage = ({ videosData }) => {
- 
+  // State to store favorite videos
   const [favoriteVideos, setFavoriteVideos] = useState([]);
 
   const handleFavoriteClick = (video, isFavorite) => {
+
     if (isFavorite) {
+      // Remove the video from favorites
       setFavoriteVideos((prevFavorites) =>
-        prevFavorites.filter((favVideo) => favVideo !== video)
+        prevFavorites.filter((favVideo) => favVideo.title !== video.title)
       );
-    } else {
-      setFavoriteVideos((prevFavorites) => [...prevFavorites, video]);
+    } 
+    else {
+      // Check if the video is already in favorites
+      const isAlreadyFavorite = favoriteVideos.some(
+        (favVideo) => favVideo === video
+      );
+
+      // Add the video to favorites only if it's not already there
+      if (!isAlreadyFavorite) {
+        setFavoriteVideos((prevFavorites) => [...prevFavorites, video]);
+      }
     }
   };
 

@@ -8,15 +8,21 @@ const ReusableCarousel = ({ slides }) => {
       <Carousel indicators={false} data-bs-theme="dark">
         {slides.map((slide, index) => (
           <Carousel.Item key={index} className="carousel-wrapper">
+            
+            {/* Corousel Image */}
             <img
               style={{ height: "100vh", width: "100vw", objectFit: "cover" }}
               src={slide.image}
               alt={`Slide ${index + 1}`}
             />
+              
+              {/* Corousel Details */}
             <div className="carousel-details">
+              
               <div className="title-content">
                 <h2 className="carousel-title">{slide.title}</h2>
               </div>
+              
               {slide.url && (
                 <div className="button-content">
                   <button
@@ -27,7 +33,9 @@ const ReusableCarousel = ({ slides }) => {
                   </button>
                 </div>
               )}
+
             </div>
+
           </Carousel.Item>
         ))}
       </Carousel>

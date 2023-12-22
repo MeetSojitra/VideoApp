@@ -149,3 +149,69 @@
   padding: 4px 16px;
   border-radius: 16px;
 }
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .video-item {
+    width: 100%; 
+  }
+  
+
+  .video-details {
+    position: static; 
+    background: none; 
+    padding: 10px; 
+    text-align: center; 
+  }
+
+  .video-details h3 {
+    font-size: 14px; 
+  }
+
+  .favorite-icon {
+    top: 5px; 
+    right: 5px;
+  }
+
+  .carousel-details {
+    left: 5%; 
+    width: 90%; 
+  }
+
+  .carousel-title {
+    font-size: 20px; 
+  }
+
+  .button-content {
+    padding: 0 10px 10px;
+  }
+  #react-portal-modal-container {
+    width: 90%; 
+    height: 90vh;
+  }
+
+  .main-wrapper .video-wrapper {
+    margin-top: 10px;
+  }
+
+  .content {
+    padding: 10px; 
+  }
+
+  .content .title {
+    font-size: 24px;
+  }
+
+  .content .tags {
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .content .tag {
+    margin: 4px; 
+  }
+}

@@ -1,19 +1,18 @@
-import {} from "react";
 import VideoGrid from "./VideoGrid";
-import PropTypes from "prop-types";
 
-const FavoriteVideo = ({ videosData }) => {
-  FavoriteVideo.propTypes = {
-    videosData: PropTypes.array.isRequired,
-  };
-
+const FavoriteVideo = ({ videosData , handleFavoriteClick}) => {
+  // If there are no videos, don't render this component
   if (videosData.length === 0) {
     return null;
   }
 
+  // Filter videos to only show favorite videos
   return (
     <div>
-      <VideoGrid videosData={videosData} />
+      <VideoGrid 
+        videosData={videosData}
+        handleFavoriteClick={handleFavoriteClick}
+      />
     </div>
   );
 };

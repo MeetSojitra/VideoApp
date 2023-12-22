@@ -8,7 +8,8 @@ const Modal = ({ isOpen, data, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <>
+    <main>
+      {/* Modal Background */}
       <ReactPortal wrapperId="react-portal-modal-container">
         <div className="main-wrapper">
           <button className="close" onClick={() => onClose()}>
@@ -38,7 +39,7 @@ const Modal = ({ isOpen, data, onClose }) => {
           </div>
         </div>
       </ReactPortal>
-    </>
+    </main>
   );
 };
 export default Modal;

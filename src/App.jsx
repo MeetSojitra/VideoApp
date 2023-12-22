@@ -3,9 +3,10 @@ import Carouselpage from './Components/Carouselpage'
 import VideoPage from './Components/VideoPage';
 
 const App = () => {
-
+  // State for store videos data
   const [videosData, setVideosData] = React.useState([]);
 
+  // Fetch videos data from API
   React.useEffect(() => {
     const fetchData = async () => {
       try {
