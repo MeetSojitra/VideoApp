@@ -17,7 +17,7 @@ const ReusableCarousel = ({ slides }) => {
 
   return (
     <>
-      <Carousel indicators={false} data-bs-theme="dark">
+      <Carousel indicators={true} data-bs-theme="dark">
         {slides.map((slide, index) => (
           <Carousel.Item key={index} className="carousel-wrapper">
             <img
