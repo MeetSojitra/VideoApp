@@ -12,6 +12,7 @@ const Modal = ({ isOpen, data, onClose }) => {
     <main>
       {/* Modal Background */}
       <ReactPortal wrapperId="react-portal-modal-container">
+
         <div className="main-wrapper">
 
           {/* Modal Close Button */}
@@ -20,6 +21,7 @@ const Modal = ({ isOpen, data, onClose }) => {
           </button>
 
           {/* Modal Heading */}
+          {/* ref https://www.npmjs.com/package/@u-wave/react-vimeo */}
           <div className="">
             <Vimeo
               video={videolink}

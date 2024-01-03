@@ -4,7 +4,7 @@ import Modal from "./modal/Modal";
 
 const VideoGrid = ({ videosData, handleFavoriteClick }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [videoData, setVideoData] = useState(null);
+  const [ModalVideo, setVideoData] = useState(null);
 
   return (
     <div className="video-grid">
@@ -19,12 +19,12 @@ const VideoGrid = ({ videosData, handleFavoriteClick }) => {
           }} // function to handle video click event and open the modal
         />
       ))}
-      {videoData && (
+      {ModalVideo && (
         <Modal
-          isOpen={openModal && videoData}
+          isOpen={openModal && ModalVideo}
           setOn={setOpenModal}
-          data={videoData}
-          onClose={() => setOpenModal(false)} // function to handle modal close event
+          data={ModalVideo}
+          onClose={() => setOpenModal(false)} // when the close buttonn click setOpenModel set the state to false
         />
       )}
     </div>

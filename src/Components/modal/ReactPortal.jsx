@@ -28,12 +28,14 @@ const ReactPortal = ({ children, wrapperId }) => {
     // Set wrapper state.
     setWrapper(element);
     // Cleanup effect.
+    console.log(element.parentNode)
     return () => {
       if (created && element?.parentNode) {
         element.parentNode.removeChild(element);
       }
     };
   }, [wrapperId]);
+  
   // Return null on initial rendering.
   if (wrapper === null) return null;
   // Return portal-wrapper component.
